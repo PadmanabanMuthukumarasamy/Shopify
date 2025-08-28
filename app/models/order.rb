@@ -7,7 +7,7 @@ class Order < ApplicationRecord
 
   private
   def finalize_callbacks
-    ::InventoryReductionWorker.reduce_stocks_async(id)
-    ::OrderConfirmationWorker.order_mailer_async(id)
+    InventoryReductionWorker.reduce_stocks_async(id, store_id)
+    OrderConfirmationWorker.order_mailer_async(id, store_id)
   end
 end

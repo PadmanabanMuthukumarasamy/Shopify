@@ -21,6 +21,7 @@ gem "solid_queue"
 gem "solid_cable"
 gem 'kaminari'
 gem 'sidekiq'
+gem 'blueprinter'
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
